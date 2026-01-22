@@ -118,6 +118,11 @@ void back(){
     a.start--;
     print();
 }
+void del(){
+    if(a.end==a.capacity)return;
+    a.end++;
+    print();
+}
 void enter(){
     write('\n');
     print();
@@ -153,6 +158,7 @@ void mode()
                     case VK_RIGHT:  right(); print(); break;
                     case VK_ESCAPE: escape(); break;
                     case VK_RETURN: enter(); break; 
+                    case VK_DELETE: del(); break; 
                     case VK_BACK:   back(); break;  
                     case VK_UP:     break;
                     case VK_DOWN:   break;
