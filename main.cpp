@@ -127,6 +127,13 @@ void enter(){
     write('\n');
     print();
 }
+void tab(){
+    int t=4;
+    while(t--){
+        write(' ');
+    }
+    print();
+}
 void mode()
 {
     HANDLE hIn = GetStdHandle(STD_INPUT_HANDLE);
@@ -156,12 +163,13 @@ void mode()
                 switch (k.wVirtualKeyCode) {
                     case VK_LEFT:   left(); print(); break;
                     case VK_RIGHT:  right(); print(); break;
-                    case VK_ESCAPE: escape(); break;
-                    case VK_RETURN: enter(); break; 
-                    case VK_DELETE: del(); break; 
-                    case VK_BACK:   back(); break;  
                     case VK_UP:     break;
                     case VK_DOWN:   break;
+                    case VK_TAB: tab(); break; 
+                    case VK_RETURN: enter(); break; 
+                    case VK_BACK:   back(); break;  
+                    case VK_DELETE: del(); break; 
+                    case VK_ESCAPE: escape(); break;
                     default:        isSpecial = false; break;
                 }
 
